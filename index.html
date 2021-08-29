@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Online markdown to html Converter</title>
+        <title>Markdown renderer</title>
         
         <!--Markdown-->
         <script defer src="mk.js"></script>
@@ -15,11 +15,12 @@
 </head>
 <body>
 
-    <h1>Console_</h1>
+    <h1 id="title">Console_</h1>
     
     <form action="" onsubmit="return cvt()">
           <textarea name="contents" id="contents" cols="30" rows="10" placeholder="Markdown Code.." required ></textarea>
           <input type="submit" value="Convert to HTML" id="convert-btn">
+          <input id="bk" type="button" value="Back to Markdown">
     </form>
 
     <div id="viewbox">Output will display here</div>

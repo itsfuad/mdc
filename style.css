@@ -8,9 +8,12 @@ body {
           flex-direction: column;
   padding: 20px;
   gap: 10px;
-  font-family: consolas, 'Courier New', Courier, monospace;
   background: #1a1a22;
   color: white;
+}
+#title{
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
 }
 form{
   display: flex;
