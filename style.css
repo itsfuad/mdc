@@ -10,8 +10,8 @@ body {
           justify-content: center;
   padding: 20px;
   gap: 10px;
-  background: #1a1a22;
-  color: white;
+  background: #FFFFFF;
+  color: black;
 }
 #title{
   font-family: 'Courier New', Courier, monospace;
@@ -26,43 +26,28 @@ form{
   align-items: center;
 }
 input, textarea {
-  background: rgba(255, 255, 255, 0.07);
+  background: #EBEDFF;
   border: none;
   margin: 5px;
   padding: 5px;
   width: min(100%, 500px);
   border-radius: 10px;
-  color: whitesmoke;
+  color: #111111;
   
 }
 
-::-webkit-input-placeholder {
-  color: white;
-}
-
-:-ms-input-placeholder {
-  color: white;
-}
-
-::-ms-input-placeholder {
-  color: white;
-}
-
-::placeholder {
-  color: white;
-}
 
 table{
-  border: 1px solid white;
+  border: 1px solid black;
 }
 table th{
-  border: 1px solid white;
+  border: 1px solid black;
 }
 table tr{
-  border: 1px solid white;
+  border: 1px solid black;
 }
 table tr td{
-  border: 1px solid white;
+  border: 1px solid black;
 }
 input[type=button]:hover, input[type=submit]:hover  {
   background: skyblue;
@@ -72,20 +57,21 @@ input[type=button]:hover, input[type=submit]:hover  {
   cursor: pointer;
 }
 #viewbox{
-  border: 2px solid skyblue;
   border-radius: 2px;
   height: max-content;
   min-width: 90vw;
   min-height: 50vh;
   padding: 5px;
+  background: #EBEDFF;
+  color: #111111;
 }
 a{
   color: skyblue;
   text-decoration: none;
 }
 footer{
-  background: #282A39;
-  color: white;
+  background: #EBEDFF;
+  color: #282A39;
   font-size: 1rem;
   text-align: center;
   padding: 10px;
