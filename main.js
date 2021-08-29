@@ -42,3 +42,11 @@ btn.addEventListener('click', ()=>{
   }
   
 });
+
+const copy = document.getElementById("copy-icon");
+
+copy.addEventListener("click", ()=>{
+  document.getElementById("txtbox").classList.toggle("copied");
+  content.select();
+  document.execCommand("copy");
+});
