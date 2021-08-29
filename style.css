@@ -29,6 +29,7 @@ input, textarea {
   width: min(100%, 500px);
   border-radius: 10px;
   color: whitesmoke;
+  
 }
 
 ::-webkit-input-placeholder {
