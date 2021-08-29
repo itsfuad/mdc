@@ -25,17 +25,20 @@ const updateviewbox = ()=> {
 }
 
 btn.addEventListener('click', ()=>{
- 
-  if (btn.value === "Show HTML") {
-    btn.value = "Show Markdown";
-    markdown = content.value;
-    html = marked(markdown);
-    viewbox.innerHTML = html;
-    content.value = html;
-  } 
-  else{
-    btn.value = "Show HTML";
-    content.value = markdown;
+  if (content.value != "") {
+    if (btn.value === "Show HTML") {
+      btn.value = "Show Markdown";
+      markdown = content.value;
+      html = marked(markdown);
+      viewbox.innerHTML = html;
+      content.value = html;
+    }
+    else {
+      btn.value = "Show HTML";
+      content.value = markdown;
+    }
+  } else {
+    alert("Write something first");
   }
   
 });
