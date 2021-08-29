@@ -48,7 +48,19 @@ input, textarea {
   color: white;
 }
 
-input[type=button]:hover {
+table{
+  border: 1px solid white;
+}
+table th{
+  border: 1px solid white;
+}
+table tr{
+  border: 1px solid white;
+}
+table tr td{
+  border: 1px solid white;
+}
+input[type=button]:hover, input[type=submit]:hover  {
   background: skyblue;
   -webkit-box-shadow: 0 0 15px skyblue;
           box-shadow: 0 0 15px skyblue;
