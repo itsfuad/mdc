@@ -32,6 +32,7 @@ const updateviewbox = ()=> {
 btn.addEventListener('click', ()=>{
   if (content.value != "") {
     if (btn.value === "Show HTML") {
+      content.readOnly = true;
       btn.value = "Show Markdown";
       markdown = content.value;
       html = marked(markdown);
@@ -41,6 +42,7 @@ btn.addEventListener('click', ()=>{
     else {
       btn.value = "Show HTML";
       content.value = markdown;
+      content.readOnly = false;
     }
   } else {
     alert("Write something first");
