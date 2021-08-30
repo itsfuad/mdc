@@ -1,9 +1,9 @@
 :root {
   --dark: #21252B;
   --light: #ffffff;
-  --primary: var(--light);
-  --text: black;
-  --background: #dffaff;
+  --primary: var(--dark);
+  --text: #111111;
+  --background: #21252B;
 }
 
 #title {
