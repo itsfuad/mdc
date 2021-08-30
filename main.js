@@ -1,6 +1,8 @@
 const content = document.getElementById("contents");
 const btn = document.getElementById("convert-btn");
 const viewbox = document.getElementById("viewbox");
+const copy = document.getElementById("copy-icon");
+const modeswitch = document.getElementById("mode");
 let markdown, html, temp;
 
 let typingTimer; //timer identifier
@@ -43,10 +45,25 @@ btn.addEventListener('click', ()=>{
   
 });
 
-const copy = document.getElementById("copy-icon");
 
 copy.addEventListener("click", ()=>{
   document.getElementById("txtbox").classList.toggle("copied");
   content.select();
   document.execCommand("copy");
+});
+let mode = "light";
+modeswitch.addEventListener("click",()=>{
+  if (mode == "dark") {
+    modeswitch.classList.remove("active");
+    document.documentElement.style.setProperty('--primary', " #EFF6FF");
+    document.documentElement.style.setProperty('--background', " #EBEDFF");
+    document.documentElement.style.setProperty('--text', " #111111");
+    mode = "light";
+  } else {
+    modeswitch.classList.add("active");
+    document.documentElement.style.setProperty('--primary', " #21252B");
+    document.documentElement.style.setProperty('--background', " #111111");
+    document.documentElement.style.setProperty('--text', " #EDEDFF");
+    mode = "dark";
+  }
 });
