@@ -2,7 +2,7 @@
   --dark: #21252B;
   --light: #ffffff;
   --primary: var(--dark);
-  --text: #111111;
+  --text: ##FFFFFF;
   --background: #21252B;
 }
 
@@ -11,7 +11,18 @@
   margin: 0;
   top: 0px;
 }
-
+table{
+  border: 1px solid var(--text);
+}
+table th{
+  border: 1px solid var(--text);
+}
+table tr{
+  border: 1px solid var(--text);
+}
+table tr td{
+  border: 1px solid var(--text);
+}
 #mode {
   position: absolute;
   top: 10px;
