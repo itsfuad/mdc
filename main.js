@@ -86,11 +86,11 @@ modeswitch.addEventListener("click",()=>{
 document.addEventListener("DOMContentLoaded", ()=>{
   console.log("Loaded");
   console.log("darkmode: ", localStorage.getItem("darkmode"));
-  if(localStorage.getItem("darkmode") == "true"){
-    console.log("darkmode");
-    darkmode();
-  }else{
+  if(localStorage.getItem("darkmode") == "false"){
     console.log("lightmode");
     lightmode();
+  }else{
+    console.log("darkmode");
+    darkmode();
   }
 });
