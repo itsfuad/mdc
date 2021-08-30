@@ -109,15 +109,15 @@ body main #txtbox input, body main #txtbox textarea {
   padding: 5px;
   width: 100%;
   border-radius: 10px;
+  margin: 10px;
 }
 
-body main #txtbox input[type=button]:hover, body main #txtbox input[type=submit]:hover {
+body main #txtbox input:hover {
   background: skyblue;
   -webkit-box-shadow: 0 0 15px skyblue;
   box-shadow: 0 0 15px skyblue;
   color: black;
   cursor: pointer;
-  margin: 10px;
 }
 
 body main #txtbox #contents {

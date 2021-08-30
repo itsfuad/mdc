@@ -82,14 +82,14 @@ body{
                 padding: 5px;
                 width: 100%;
                 border-radius: 10px;
+                margin: 10px;
               }
-              input[type=button]:hover, input[type=submit]:hover  {
+              input:hover {
                 background: skyblue;
                 -webkit-box-shadow: 0 0 15px skyblue;
                         box-shadow: 0 0 15px skyblue;
                 color: black;
                 cursor: pointer;
-                margin: 10px;
               }
             #contents{
                 width: 100%;
