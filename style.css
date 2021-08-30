@@ -7,9 +7,10 @@
 }
 
 #title {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Impact;
   margin: 0;
   top: 0px;
+  font-weight: normal;
 }
 table{
   border: 1px solid var(--text);
