@@ -1,0 +1,130 @@
+:root{
+    --dark: #21252B;
+    --light: #ffffff;
+    
+    --primary: var(--light);
+    --text: black;
+    --background: #dffaff;
+}
+
+#title{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    top: 0px;
+  }
+  
+  #mode{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 60px;
+    background: #2C3038;
+    border-radius: 50px;
+    transition: 600ms;
+  }
+  
+  #mode::before{
+    content:"";
+    position: absolute;
+    height: 32px;
+    width:32px;
+    border-radius:50%;
+    top: -2px;
+    left: -2px;
+    background: white;
+    box-shadow: 0 0 5px #2C303873;
+    transition: 600ms;
+  }
+  #mode.active{
+    background: #F4FDFF;
+    box-shadow: inset 0 0 15px #38D8FF;
+  }
+  #mode.active::before{
+    left: 30px;
+  }
+  a{
+    color: skyblue;
+    text-decoration: none;
+  }
+body{
+    color: var(--text);
+    background: var(--primary);
+    font-family: Arial, Helvetica, sans-serif;
+    #title{
+        font-size: 3rem;
+        font-family: Consolas;
+    }
+    main{
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        gap: 20px;
+        min-height: 70vh;
+        max-width: 90vw;
+
+        #txtbox{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height: max-content;
+            color: var(--text);
+              input, textarea {
+                background: var(--background);
+                color: var(--text);
+                border: none;
+                margin: 5px;
+                padding: 5px;
+                width: 100%;
+                border-radius: 10px;
+              }
+              input[type=button]:hover, input[type=submit]:hover  {
+                background: skyblue;
+                -webkit-box-shadow: 0 0 15px skyblue;
+                        box-shadow: 0 0 15px skyblue;
+                color: black;
+                cursor: pointer;
+                margin: 10px;
+              }
+            #contents{
+                width: 100%;
+                min-height: 50vh;
+            }
+            #copy-icon{
+                position: relative;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+       }
+       #viewbox{
+           background: var(--background);
+           padding: 10px;
+           border-radius: 10px;
+           min-height: 50vh;
+           margin: 10px;
+       }
+    }
+    footer{
+        background: var(--background);
+        color: var(--text);
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+        margin-top: 15px;
+        border-radius: 5px;
+      }
+}
+@media (orientation: landscape) and (min-device-aspect-ratio: 1 / 1){
+    body {
+        main{
+            grid-template-columns: 50% 50%;
+        }
+    }
+}

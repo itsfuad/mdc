@@ -3,11 +3,13 @@ const btn = document.getElementById("convert-btn");
 const viewbox = document.getElementById("viewbox");
 const copy = document.getElementById("copy-icon");
 const modeswitch = document.getElementById("mode");
-let markdown, html, temp;
+let markdown, html, mode;
 
 let typingTimer; //timer identifier
 let doneTypingInterval = 500; //time in ms (5 seconds)
 let myInput = document.getElementById('contents');
+
+
 
 
 //on keyup, start the countdown
@@ -24,6 +26,7 @@ const updateviewbox = ()=> {
   markdown = content.value;
   html = marked(markdown);
   viewbox.innerHTML = html;
+  document.getElementById("copy-icon").value = "Copy Code";
 }
 
 btn.addEventListener('click', ()=>{
@@ -47,23 +50,47 @@ btn.addEventListener('click', ()=>{
 
 
 copy.addEventListener("click", ()=>{
-  document.getElementById("txtbox").classList.toggle("copied");
+  document.getElementById("copy-icon").value = "Copied!";
   content.select();
   document.execCommand("copy");
 });
-let mode = "light";
+
+const darkmode = () => {
+  modeswitch.classList.add("active");
+  document.documentElement.style.setProperty('--primary', " #21252B");
+  document.documentElement.style.setProperty('--background', " #111111");
+  document.documentElement.style.setProperty('--text', " #EDEDFF");
+  mode = "dark";
+}
+
+const lightmode = () => {
+  modeswitch.classList.remove("active");
+  document.documentElement.style.setProperty('--primary', " #FFFFFF");
+  document.documentElement.style.setProperty('--background', " #dffaff");
+  document.documentElement.style.setProperty('--text', " #111111");
+  mode = "light";
+}
 modeswitch.addEventListener("click",()=>{
   if (mode == "dark") {
-    modeswitch.classList.remove("active");
-    document.documentElement.style.setProperty('--primary', " #EFF6FF");
-    document.documentElement.style.setProperty('--background', " #EBEDFF");
-    document.documentElement.style.setProperty('--text', " #111111");
-    mode = "light";
+    lightmode();
+    console.log("changed to lightmode");
+    localStorage.setItem("darkmode", false);
   } else {
-    modeswitch.classList.add("active");
-    document.documentElement.style.setProperty('--primary', " #21252B");
-    document.documentElement.style.setProperty('--background', " #111111");
-    document.documentElement.style.setProperty('--text', " #EDEDFF");
-    mode = "dark";
+    darkmode();
+    console.log("changed to darkmode");
+    localStorage.setItem("darkmode", true);
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  console.log("Loaded");
+  console.log("darkmode: ", localStorage.getItem("darkmode"));
+  if(localStorage.getItem("darkmode") == "true"){
+    console.log("darkmode");
+    darkmode();
+  }else{
+    console.log("lightmode");
+    lightmode();
   }
 });
