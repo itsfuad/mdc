@@ -86,8 +86,8 @@ modeswitch.addEventListener("click",()=>{
 });
 
 
-document.addEventListener("DOMContentLoaded", async ()=>{
-  await sleep(5000);
+document.addEventListener("DOMContentLoaded", ()=>{
+  //await sleep(5000);
   console.log("Loaded");
   console.log("darkmode: ", localStorage.getItem("darkmode"));
   if(localStorage.getItem("darkmode") == "false"){
