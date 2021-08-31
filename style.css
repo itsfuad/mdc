@@ -1,9 +1,9 @@
 :root {
   --dark: #21252B;
   --light: #ffffff;
-  --primary: var(--dark);
-  --text: ##FFFFFF;
-  --background: #21252B;
+  --primary: #21252B;
+  --text: #EDEDFF;
+  --background: #111111;
 }
 
 #title {
@@ -39,11 +39,11 @@ table tr td{
 #mode::before {
   content: "";
   position: absolute;
-  height: 32px;
-  width: 32px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
-  top: -2px;
-  left: -2px;
+  top: 0px;
+  left: 0px;
   background: white;
   -webkit-box-shadow: 0 0 5px #2C303873;
           box-shadow: 0 0 5px #2C303873;

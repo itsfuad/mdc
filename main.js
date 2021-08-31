@@ -10,7 +10,9 @@ let doneTypingInterval = 500; //time in ms (5 seconds)
 let myInput = document.getElementById('contents');
 
 
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 //on keyup, start the countdown
 myInput.addEventListener('keyup', () => {
@@ -84,7 +86,8 @@ modeswitch.addEventListener("click",()=>{
 });
 
 
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", async ()=>{
+  await sleep(5000);
   console.log("Loaded");
   console.log("darkmode: ", localStorage.getItem("darkmode"));
   if(localStorage.getItem("darkmode") == "false"){
