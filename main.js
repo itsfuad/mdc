@@ -28,6 +28,7 @@ const updateviewbox = ()=> {
   markdown = content.value;
   html = marked(markdown);
   viewbox.innerHTML = html;
+  hljs.highlightAll();
   document.getElementById("copy-icon").value = "Copy Code";
 }
 
