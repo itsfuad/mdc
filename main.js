@@ -50,6 +50,7 @@ btn.addEventListener('click', ()=>{
   } else {
     alert("Write something first");
   }
+  hljs.highlightAll();
 });
 
 
