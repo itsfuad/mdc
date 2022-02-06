@@ -9,7 +9,6 @@ let typingTimer; //timer identifier
 let doneTypingInterval = 500; //time in ms (5 seconds)
 let myInput = document.getElementById('contents');
 
-document.getElementById('version').innerText=process.env.VER;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
