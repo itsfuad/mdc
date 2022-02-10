@@ -15,6 +15,9 @@
 table, th, td {
     border: 1px solid;
 }
+th, td{
+ padding: 2px;
+}
 
 #title {
   font-family: 'Courier New', Courier, monospace;
