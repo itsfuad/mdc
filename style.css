@@ -1,9 +1,19 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --dark: #21252B;
   --light: #ffffff;
   --primary: var(--light);
   --text: black;
   --background: #dffaff;
+}
+
+table, th, td {
+    border: 1px solid;
 }
 
 #title {
