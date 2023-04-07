@@ -13,14 +13,6 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//on keyup, start the countdown
-myInput.addEventListener('keyup', () => {
-  clearTimeout(typingTimer);
-  if (myInput.value) {
-    typingTimer = setTimeout(updateviewbox, doneTypingInterval);
-  }
-});
-
 //user is "finished typing," do something
 const updateviewbox = ()=> {
   //do something
@@ -50,6 +42,10 @@ btn.addEventListener('click', ()=>{
     alert("Write something first");
   }
   hljs.highlightAll();
+});
+
+content.addEventListener('input', ()=>{
+  updateviewbox();
 });
 
 
